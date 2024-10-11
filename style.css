@@ -14,10 +14,14 @@ background-color: black;
     height: 100px;
     color: white;
     text-align: center;
-    padding-top: 2rem;
+    padding: 2rem 0;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .calc{
-    width: 300px;
+    width: 340px;
 }
 button{
     margin: 10px;
@@ -25,7 +29,5 @@ button{
     font-size: 1.34rem;
     height: 50px;
 }
-.number2{
-    background-color: blue;
-}
+
 

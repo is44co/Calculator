@@ -26,25 +26,23 @@ nums.forEach((num1) => {
   });
 });
 
-operators.forEach((operato1)=>{
-operato1.addEventListener('click',()=>{
 
-operator=operato1.textContent
+operators.forEach((operato1) => {
+  operato1.addEventListener('click', () => {
+    if (firstnumber === null) {
+      firstnumber = currentNum;
+    } else {
+      secondnumber = currentNum;
+      result = equations();      
+      displayResult(result);
+      firstnumber = result;
+    }
+    operator = operato1.textContent;
+    currentNum = ''
+  });
+});
 
-firstnumber = currentNum; 
-currentNum = '';   
-})
 
-
-})
-
-// plus.addEventListener('click', () => {
- 
-//     firstnumber = currentNum;  
-//     currentNum = '';           
-               
-  
-// });
 
 equal.addEventListener('click', Equal );
 
@@ -89,7 +87,7 @@ function equations(){
     
    result=Number(firstnumber)+ Number(secondnumber)
   }
-  if(operator=='*'){
+  if(operator=='X'){
     
    result=  Number(firstnumber)* Number(secondnumber)
   }
